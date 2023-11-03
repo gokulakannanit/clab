@@ -1,7 +1,7 @@
 :host {
     display: block;
     background-color: #EBF7FF;
-    height: calc(100vh - 80px);
+    height: calc(100vh - 70px);
     width: 100%
 }
 
@@ -20,6 +20,10 @@
     background-color: #fff;
     color: #021D2E;
     margin: 30px 10px;
+}
+
+.entry-card .icon img {
+    width:80px;
 }
 
 a.entry-card:active, 

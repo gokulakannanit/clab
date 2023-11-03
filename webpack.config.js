@@ -5,14 +5,14 @@ module.exports = {
     new CompressionPlugin({
       filename: "[path][base].br[query]",
       algorithm: "brotliCompress",
-      test: /\.(js|css|html|svg|txt|eot|otf|ttf|gif)$/,
+      test: /\.(js|css|html|svg|txt|eot|otf|ttf|gif|png)$/,
       threshold: 0,
       minRatio: 0.7,
     }),
     new CompressionPlugin({
       filename: "[path][base].gz[query]",
       algorithm: "gzip",
-      test: /\.(js|css|html|svg|txt|eot|otf|ttf|gif)$/,
+      test: /\.(js|css|html|svg|txt|eot|otf|ttf|gif|png)$/,
       threshold: 0,
       minRatio: 0.7,
     })
