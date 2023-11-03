@@ -39,7 +39,7 @@ export class CommonComponent implements OnInit{
     "rides": {title: 'Test history', backURL: '/home'},
     "about": {title: 'About Us', backURL: '/home'},
     "patient": {title: 'Add Patient', backURL: '/home'},
-    "support": {title: 'Need help ?', backURL: '/home'},
+    "doctor": {title: 'Add Doctor', backURL: '/home'},
   });
 
   ngOnInit(): void {
