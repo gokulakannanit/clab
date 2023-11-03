@@ -1,0 +1,21 @@
+<header class="app_header_home mat-elevation-z4" *ngIf="isHomepage() else headerOther;">
+    <div class="logo">
+      <img src="/assets/images/logo.png" style="height:40px;" />
+      <span class="txt">C <span style="font-size: 14px;color:#9CC63D;">Labs</span></span>
+    </div>
+</header>
+
+<ng-template #headerOther>
+    <header class="app_header_other mat-elevation-z4">
+      <a mat-button color="default" class="v-align-middle" style="flex:0" [routerLink]="pageoObject().backURL">
+          <mat-icon class="v-align-middle">arrow_back</mat-icon>
+      </a>
+      <h2 style="flex:auto;padding:5px;margin:0;">{{ pageoObject().title }}</h2>
+  </header>
+  <div *ngIf="isLoading()">
+    <div class="page_loader">
+      <mat-progress-bar color="Primary" mode="indeterminate"></mat-progress-bar>
+    </div>
+    <div class="bg_loading"></div>
+  </div>
+</ng-template>

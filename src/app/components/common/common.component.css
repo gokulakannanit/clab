@@ -1,0 +1,59 @@
+.app_header_home {
+    position: relative;
+    display: flex;
+    padding: 10px;
+    background-color: #fff;
+    z-index:11;
+    box-sizing: border-box;
+}
+.app_header_home button .mat-icon{
+    font-size: 32px;
+    height: 36px;
+}
+.app_header_other {
+    position: relative;
+    display: flex;
+    padding: 10px;
+    background-color: #fff;
+    z-index: 12;
+    box-sizing: border-box;
+}
+
+.page_loader {
+    position: relative;
+    z-index: 13;
+}
+
+.bg_loading {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 11;
+    background-color: #fff;
+}
+
+.logo {
+    flex:auto;
+    text-align: center;
+}
+
+.logo img {
+    float: left;
+}
+
+.logo .txt {
+    height: 40px;
+    display: inline-block;
+    line-height: 40px;
+    font-size: 26px;
+    font-weight: 800;
+    vertical-align: middle;
+    padding-right: 25px;
+    color: #207EB9;
+}
+
+.app_header_home .mdc-button {
+    min-width: initial;
+}

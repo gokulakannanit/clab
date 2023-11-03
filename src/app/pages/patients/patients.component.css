@@ -1,0 +1,25 @@
+footer{
+    border-top: 1px solid #ccc;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.form{
+    padding: 20px;
+}
+
+footer button {
+    min-width: 150px;
+}
+
+footer button:last-child {
+    flex: auto;
+    margin-left:20px;
+}

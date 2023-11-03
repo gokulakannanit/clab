@@ -1,0 +1,34 @@
+:host {
+    display: block;
+    background-color: #EBF7FF;
+    height: calc(100vh - 80px);
+    width: 100%
+}
+
+.home{
+    display: flex;
+    padding: 20px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.entry-card {
+    width: 130px;
+    border-radius: 6px;
+    text-align: center;
+    margin-top: 30px;
+    background-color: #fff;
+    color: #021D2E;
+    margin: 30px 10px;
+}
+
+a.entry-card:active, 
+a.entry-card:visited,
+a.entry-card:link{
+    text-decoration: none;
+}
+
+.entry-card .title{
+    margin:0px 0 10px;
+    font-weight: bold;    
+}

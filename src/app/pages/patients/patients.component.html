@@ -1,0 +1,38 @@
+<div class="form">
+    <h2>New Test Form</h2>
+    <form>
+        <div style="margin-bottom: 20px;">  
+            <mat-radio-group>    
+                <mat-radio-button value="1" checked>Male</mat-radio-button>    
+                <mat-radio-button value="2">Female</mat-radio-button>    
+            </mat-radio-group>
+        </div>
+
+        <mat-form-field class="full-width">    
+            <input matInput placeholder="Full Name">    
+        </mat-form-field>    
+
+        <mat-form-field class="full-width">    
+            <input matInput placeholder="Mobile">    
+        </mat-form-field>
+            
+        <mat-form-field class="full-width">    
+            <input matInput [matDatepicker]="picker" placeholder="Date of birth">    
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>    
+            <mat-datepicker touchUi="true" #picker></mat-datepicker>    
+        </mat-form-field>
+
+        <mat-form-field class="full-width">    
+            <input matInput placeholder="Email">    
+        </mat-form-field>
+
+        <mat-form-field class="full-width">    
+            <textarea matInput placeholder="Address" matTextareaAutosize matAutosizeMinRows="2" matAutosizeMaxRows="5"></textarea>    
+        </mat-form-field>
+
+       <footer>
+           <button mat-raised-button>CLEAR</button>
+           <button mat-raised-button color="primary">ADD PATIENT</button>
+       </footer>               
+    </form> 
+</div>

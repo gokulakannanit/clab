@@ -1,0 +1,39 @@
+.route_list {
+    position: relative;
+    margin: 0;
+    padding:0 15px;
+}
+
+.route_list::before {
+    content:'';
+    position: absolute;
+    top: 12px;
+    left: 2px;
+    height: calc(100% - 20px);
+    border-left: 1px dashed #CCC;
+}
+.route_list li {
+    color: var(--secondary-color);
+    margin-top:10px;
+}
+
+.route_list.small li {
+    margin-top:0;
+}
+
+.route_list li:first-child {
+    color: var(--primary-color);
+}
+
+.route_list li span{
+    display: block;
+    color:#666;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 16px;
+    white-space: nowrap;
+}
+
+.route_list.small li span {
+    font-size: 12px;
+}
