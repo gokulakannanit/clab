@@ -41,6 +41,7 @@
 
 .logo img {
     float: left;
+    margin-left: 10px;
 }
 
 .logo .txt {
@@ -50,7 +51,7 @@
     font-size: 26px;
     font-weight: 800;
     vertical-align: middle;
-    padding-right: 25px;
+    padding-right: 20px;
     color: #207EB9;
 }
 
