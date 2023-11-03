@@ -49,7 +49,7 @@
         .scale_anim img {
             height: 120px;
         }
-        
+
         @keyframes crescendo {
             from {
                 transform: scale(0, 0);
@@ -80,19 +80,10 @@
     </main>
 
     <script>
-        var mapApiLoaded = false;
-        function initMap(mapObj) {
-            mapApiLoaded = !mapObj.error;
-        }
         const closeLoader = () => {
             document.querySelectorAll('.loading')[0].style.display = 'none';
             document.querySelectorAll('.fixed_bg')[0].style.display = 'none';
         }
-
-        window.screen.lock && window.screen.lock('portrait');
-    </script>
-
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOOQ3JePVpVpDFBR8cjj2GEO_DDihuE8A&libraries=places&callback=initMap.bind(this)">
     </script>
 </body>
 </html>
