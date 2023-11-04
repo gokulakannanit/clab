@@ -39,6 +39,7 @@ export class CommonComponent implements OnInit{
     "rides": {title: 'Test history', backURL: '/home'},
     "about": {title: 'About Us', backURL: '/home'},
     "patient": {title: 'Add Patient', backURL: '/home'},
+    "test": {title: 'New Test', backURL: '/home'},
     "doctor": {title: 'Add Doctor', backURL: '/home'},
   });
 
@@ -61,6 +62,6 @@ export class CommonComponent implements OnInit{
     const URL = val.split("/")[val.split("/").length-1] || val;
     console.log('URL >...', URL);
     const selectPageobj:PagesDetails = this.pagesDetails();
-    this.pageoObject.set(selectPageobj[URL] || {});
+    this.pageoObject.set(selectPageobj[URL] || {title:'No Title Found', backURL:'/home'});
   }
 }

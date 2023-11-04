@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit{
     { title: 'ADD PATIENT', link:'/add/patient', icon: 'patient'},
     { title: 'ADD DOCTOR', link:'/add/doctor', icon: 'doctor'},
     { title: 'NEW TEST', link:'/new/test', icon: 'form'},
-    { title: 'REPORT HISTORY', link:'/test/history', icon: 'history'},
+    { title: 'VIEW TEST', link:'/test/history', icon: 'history'},
   ])
 
   ngOnInit(): void {

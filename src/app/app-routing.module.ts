@@ -22,7 +22,18 @@ const routes: Routes = [
     path: 'add/doctor',
     loadChildren: () =>
       import('./pages/doctor/doctor.module').then((m) => m.DoctorModule),
-  }
+  },
+  {
+    path: 'new/test',
+    loadChildren: () =>
+      import('./pages/test-form/test-form.module').then((m) => m.TestFormModule),
+  },
+  //Wild Card Route for 404 request 
+  { 
+    path: '**',
+    loadChildren: () =>
+      import('./pages/page-not-found/page-not-found.module').then((m) => m.PageNotFoundModule),
+  }, 
 ];
 
 @NgModule({
