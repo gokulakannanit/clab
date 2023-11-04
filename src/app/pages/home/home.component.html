@@ -1,26 +1,8 @@
 <div class="home">
-    <a class="entry-card mat-elevation-z2" routerLink="/add/patient">
+    <a class="entry-card mat-elevation-z2" *ngFor="let entry of entryPoints()" [routerLink]="entry.link">
         <div class="icon">
-            <img src="/assets/images/icons/icon-patient.png" alt="patient"/>
+            <img [src]="'/assets/images/icons/'+entry.icon+'.png'" alt="patient"/>
         </div>
-        <div class="title">ADD PATIENT</div>
-    </a>
-    <a class="entry-card mat-elevation-z2" routerLink="/add/doctor">
-        <div class="icon">
-            <img src="/assets/images/icons/icon-doctor.png" alt="patient"/>
-        </div>
-        <div class="title">ADD DOCTOR</div>
-    </a>
-    <a class="entry-card mat-elevation-z2">
-        <div class="icon">
-            <img src="/assets/images/icons/icon-form.png" alt="test"/>
-        </div>
-        <div class="title">NEW TEST</div>
-    </a>
-    <a class="entry-card mat-elevation-z2">
-        <div class="icon">
-            <img src="/assets/images/icons/icons-search.png" alt="history"/>
-        </div>
-        <div class="title">REPORT HISTORY</div>
+        <div class="title">{{ entry.title }}</div>
     </a>
 </div>
