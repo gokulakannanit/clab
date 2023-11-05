@@ -1,27 +1,37 @@
 import { Component } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { Observable, map, startWith } from 'rxjs';
+import { Observable } from 'rxjs';
 
 export interface BasicInfo {
   id: number,
   name: string,
 }
 
-export interface PatientInfo extends BasicInfo {
+export interface MemberInfo extends BasicInfo {
   mobile: number
 }
 
 @Component({
-  selector: 'app-test-form',
   templateUrl: './test-form.component.html',
   styleUrls: ['./test-form.component.css']
 })
 export class TestFormComponent {
-  hospitalControl = new FormControl('');
+  selectedTest = new FormControl('');
 
-  patients: PatientInfo[] = [
+  testList: BasicInfo[] = [
+    { id:1, name:"BLOAD TEST-BASIC"},
+    { id:2, name:"BLOAD TEST-PRI"},
+    { id:3, name:"SUGAR TEST"},
+    { id:4, name:"URINE TEST"}
+  ];
+
+  patients: MemberInfo[] = [
     {id:1 , name:"Gokula Jeyagopal", mobile: 8056190788},
     {id:2 , name:"Bhaskar", mobile: 8056190788},
+  ];
+  doctors: MemberInfo[] = [
+    {id:1 , name:"Vijay", mobile: 8056190788},
+    {id:2 , name:"Sathish", mobile: 8056190788},
   ];
   hospitals: BasicInfo[] = [
     {id:1 , name:"ABC HOSPITAL"},
@@ -31,15 +41,6 @@ export class TestFormComponent {
   filteredHospitals: Observable<BasicInfo[]>;
 
   ngOnInit() {
-    this.filteredHospitals = this.hospitalControl.valueChanges.pipe(
-      startWith(''),
-      map(value => this._filter(value || '', this.hospitals)),
-    );
   }
 
-  private _filter(value: string, options: any[]): PatientInfo[] {
-    const filterValue = value.toLowerCase();
-
-    return options.filter(option => option.name.toLowerCase().includes(filterValue));
-  }
 }

@@ -6,8 +6,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
-import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { AutoCompleteComponent } from 'src/app/common/auto-complete/auto-complete.component';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -18,9 +18,9 @@ import { AutoCompleteComponent } from 'src/app/common/auto-complete/auto-complet
     FormsModule,
     ReactiveFormsModule,
     MatFormFieldModule,
-    MatAutocompleteModule,
     MatButtonModule,
     MatInputModule,
+    MatSelectModule,
     AutoCompleteComponent,
     RouterModule.forChild([
       {

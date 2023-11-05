@@ -2,6 +2,13 @@
     <form>
         <auto-complete label="Select Patient" [options]="patients"></auto-complete>
         <auto-complete label="Select Hospital" [options]="hospitals"></auto-complete>
+        <auto-complete label="Select Doctor" [options]="doctors"></auto-complete>
+        <mat-form-field class="full-width">
+          <mat-label>Select Test</mat-label>
+          <mat-select [formControl]="selectedTest" multiple>
+            <mat-option *ngFor="let test of testList" [value]="test">{{test.name}}</mat-option>
+          </mat-select>
+        </mat-form-field>
        <footer>
            <button mat-raised-button>CLEAR</button>
            <button mat-raised-button color="primary">SUBMIT TEST</button>
