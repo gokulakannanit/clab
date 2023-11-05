@@ -1,17 +1,7 @@
 <div class="form">
     <form>
-        <mat-form-field class="full-width">    
-            <input matInput placeholder="Full Name">    
-        </mat-form-field>    
-
-        <mat-form-field class="full-width">    
-            <input matInput placeholder="Mobile">    
-        </mat-form-field>
-            
-        <mat-form-field class="full-width">    
-            <input matInput placeholder="Hospital Name">    
-        </mat-form-field>
-
+        <auto-complete label="Select Patient" [options]="patients"></auto-complete>
+        <auto-complete label="Select Hospital" [options]="hospitals"></auto-complete>
        <footer>
            <button mat-raised-button>CLEAR</button>
            <button mat-raised-button color="primary">SUBMIT TEST</button>

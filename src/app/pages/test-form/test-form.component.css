@@ -23,3 +23,9 @@ footer button:last-child {
     flex: auto;
     margin-left:20px;
 }
+
+.sub_title {
+    flex:auto;
+    font-size: 12px;
+    text-align: right;
+}
