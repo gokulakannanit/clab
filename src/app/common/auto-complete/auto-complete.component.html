@@ -1,11 +1,14 @@
 <mat-form-field class="full-width">
     <mat-label>{{ label }}</mat-label>
-    <input type="text" matInput
+    <input type="text" matInput #inputtxt
             [placeholder]="label"
-            [ariaLabel]="label"           
+            [ariaLabel]="label" 
             [formControl]="myControl"
             [matAutocomplete]="auto">
-    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+            <button matSuffix mat-icon-button aria-label="Clear" (click)="clearSelection()">
+                <mat-icon>close</mat-icon>
+              </button>
+    <mat-autocomplete #auto="matAutocomplete">
         <mat-option *ngFor="let option of filteredOptions | async" [value]="option.name">
           <div class="flex_box">
             <div>{{option.name}}</div>
