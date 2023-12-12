@@ -88,6 +88,9 @@
     </main>
 
     <script>
+        window.addEventListener("message", (event) => {
+            console.log(`Received message`,event);
+        });
         const closeLoader = () => {
             document.querySelectorAll('.loading')[0].style.display = 'none';
             document.querySelectorAll('.fixed_bg')[0].style.display = 'none';
